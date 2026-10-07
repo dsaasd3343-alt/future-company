@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Imad &amp; Alex — Clean, honest websites for small businesses</title>
+<meta name="description" content="Imad & Alex build fast, modern websites for small businesses: one-page sites, business sites, booking & e-commerce. October offer: complete one-page website, flat $25 one-off (was £650).">
+<style>
+  :root{
+    --bg:#0b0d1a; --bg2:#121530;
+    --ink:#f2f3fa; --ink-soft:#a9b0d0;
+    --violet:#7c6cff; --indigo:#4a3fd4; --amber:#ffb454;
+    --glass:rgba(255,255,255,.06); --stroke:rgba(255,255,255,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;overflow-x:hidden}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  a{color:inherit}
+  /* ---------- HERO ---------- */
+  header{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;
+    background:radial-gradient(1200px 600px at 75% -10%, rgba(124,108,255,.35), transparent 60%),
+               radial-gradient(900px 500px at -10% 110%, rgba(255,180,84,.14), transparent 55%),
+               linear-gradient(180deg,var(--bg2),var(--bg) 70%);}
+  nav{position:absolute;top:0;left:0;right:0;padding:20px 0;z-index:5}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between}
+  .logo{font-weight:800;font-size:1.15rem;letter-spacing:.5px}
+  .logo span{color:var(--amber)}
+  nav a.cta-mini{font-size:.85rem;text-decoration:none;border:1px solid var(--stroke);padding:8px 16px;border-radius:999px;background:var(--glass);backdrop-filter:blur(8px)}
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:130px 0 80px}
+  .kicker{display:inline-block;font-size:.75rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--amber);margin-bottom:18px;border:1px solid rgba(255,180,84,.35);padding:6px 14px;border-radius:999px;background:rgba(255,180,84,.08)}
+  h1{font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.15;font-weight:800;letter-spacing:-.5px}
+  h1 em{font-style:normal;background:linear-gradient(90deg,var(--violet),#b48cff 55%,var(--amber));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{color:var(--ink-soft);margin:22px 0 34px;font-size:1.08rem;max-width:46ch}
+  .btn{display:inline-block;text-decoration:none;font-weight:700;padding:15px 30px;border-radius:14px;transition:transform .25s,box-shadow .25s}
+  .btn.primary{background:linear-gradient(90deg,var(--indigo),var(--violet));color:#fff;box-shadow:0 10px 34px rgba(124,108,255,.35)}
+  .btn.primary:hover{transform:translateY(-3px);box-shadow:0 16px 44px rgba(124,108,255,.5)}
+  .btn.ghost{border:1px solid var(--stroke);background:var(--glass);color:var(--ink);margin-left:14px}
+  .hero-art{position:relative}
+  .hero-art .imgwrap{overflow:hidden;border-radius:24px;box-shadow:0 30px 80px rgba(0,0,0,.55);border:1px solid var(--stroke)}
+  .hero-art img{width:100%;display:block;animation:slowzoom 18s ease-in-out infinite alternate;will-change:transform}
+  @keyframes slowzoom{from{transform:scale(1)}to{transform:scale(1.07)}}
+  .float-badge{position:absolute;padding:10px 18px;border-radius:14px;background:rgba(18,21,48,.85);border:1px solid var(--stroke);backdrop-filter:blur(10px);font-size:.85rem;font-weight:600;animation:float 5s ease-in-out infinite;z-index:2}
+  .float-badge.b1{top:-16px;right:-8px}
+  .float-badge.b2{bottom:-14px;left:-10px;animation-delay:2.2s}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+  .scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:var(--ink-soft);font-size:.75rem;letter-spacing:2px;text-transform:uppercase;animation:float 3s ease-in-out infinite}
+  .offer-strip{position:relative;z-index:3;background:linear-gradient(90deg,rgba(255,180,84,.16),rgba(124,108,255,.16));border-top:1px solid var(--stroke);border-bottom:1px solid var(--stroke);padding:18px 0;text-align:center;font-size:.98rem}
+  .offer-strip b{color:var(--amber)}
+  /* ---------- SECTIONS ---------- */
+  section{padding:96px 0;position:relative}
+  .eyebrow{color:var(--violet);font-size:.78rem;letter-spacing:2.5px;text-transform:uppercase;font-weight:700}
+  h2{font-size:clamp(1.6rem,3.5vw,2.3rem);margin:10px 0 14px;letter-spacing:-.3px}
+  .lead{color:var(--ink-soft);max-width:62ch}
+  /* ---------- BIG PARALLAX BAND (Apple-style) ---------- */
+  .band{padding:0;overflow:hidden}
+  .band .inner{height:78vh;min-height:420px;display:flex;align-items:center;justify-content:center;position:relative}
+  .band img{position:absolute;inset:-12% -6%;width:112%;height:124%;object-fit:cover;will-change:transform}
+  .band .caption{position:relative;z-index:2;text-align:center;background:rgba(8,10,22,.55);border:1px solid var(--stroke);backdrop-filter:blur(12px);padding:36px 44px;border-radius:26px;max-width:640px}
+  .band .caption p{color:var(--ink-soft)}
+  .band .caption h2{margin-top:8px}
+  /* ---------- SERVICES ---------- */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+  .card{background:var(--glass);border:1px solid var(--stroke);border-radius:20px;padding:28px 24px;backdrop-filter:blur(10px);transition:transform .3s,border-color .3s,box-shadow .3s}
+  .card:hover{transform:translateY(-6px) scale(1.01);border-color:rgba(124,108,255,.5);box-shadow:0 18px 50px rgba(124,108,255,.18)}
+  .card .ico{font-size:1.7rem;margin-bottom:14px;display:block}
+  .card h3{font-size:1.08rem;margin-bottom:10px}
+  .card p{color:var(--ink-soft);font-size:.92rem}
+  .price-line{margin-top:16px;font-size:.9rem}
+  .old-price{color:var(--ink-soft);margin-right:10px;font-size:.82rem}
+  .new-price{color:var(--amber);font-weight:800;letter-spacing:.4px}
+  .std-price{color:var(--amber);font-weight:700;letter-spacing:.4px}
+  .price-note{display:block;margin-top:6px;font-size:.75rem;color:var(--ink-soft)}
+  /* ---------- PRICING TABLE ---------- */
+  .pricing{margin-top:48px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .plan{background:var(--glass);border:1px solid var(--stroke);border-radius:22px;padding:30px 24px;text-align:center;backdrop-filter:blur(10px);position:relative;transition:transform .3s,border-color .3s}
+  .plan:hover{transform:translateY(-6px);border-color:rgba(124,108,255,.5)}
+  .plan.hot{border-color:rgba(255,180,84,.55);background:linear-gradient(180deg,rgba(255,180,84,.12),var(--glass))}
+  .plan .tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,var(--amber),#ff8f5c);color:#1a1408;font-weight:800;font-size:.72rem;padding:5px 14px;border-radius:999px;letter-spacing:.8px}
+  .plan h3{font-size:1rem;margin-bottom:6px}
+  .plan .p-old{color:var(--ink-soft);font-size:.85rem}
+  .plan .p-new{font-size:1.85rem;font-weight:800;margin:6px 0 4px;color:var(--amber)}
+  .plan .p-new small{font-size:.8rem;font-weight:600;color:var(--ink-soft)}
+  .plan ul{list-style:none;margin:16px 0 20px;text-align:left}
+  .plan li{font-size:.85rem;color:var(--ink-soft);padding:5px 0 5px 22px;position:relative}
+  .plan li::before{content:"✓";position:absolute;left:0;color:var(--violet);font-weight:800}
+  .plan a{display:block;text-decoration:none;font-weight:700;font-size:.85rem;padding:11px 0;border-radius:12px;background:linear-gradient(90deg,var(--indigo),var(--violet));color:#fff;transition:transform .25s}
+  .plan a:hover{transform:scale(1.03)}
+  .pricing-note{margin-top:26px;text-align:center;color:var(--ink-soft);font-size:.88rem}
+  /* ---------- WHY ---------- */
+  .why{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px}
+  .why div{border-left:3px solid var(--violet);padding:6px 0 6px 18px}
+  .why h3{font-size:.98rem;margin-bottom:6px}
+  .why p{color:var(--ink-soft);font-size:.88rem}
+  /* ---------- WORK ---------- */
+  .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+  .work{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--stroke)}
+  .work img{width:100%;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1);will-change:transform}
+  .work:hover img{transform:scale(1.08)}
+  .work .cap{position:absolute;inset:auto 0 0 0;padding:16px;background:linear-gradient(transparent,rgba(5,6,15,.9));font-size:.9rem}
+  /* ---------- PROCESS ---------- */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:56px;counter-reset:step}
+  .step{position:relative;background:var(--glass);border:1px solid var(--stroke);border-radius:18px;padding:30px 22px 26px;transition:transform .3s,border-color .3s}
+  .step:hover{transform:translateY(-5px);border-color:rgba(124,108,255,.5)}
+  .step::before{counter-increment:step;content:counter(step,decimal-leading-zero);position:absolute;top:-14px;left:20px;background:linear-gradient(90deg,var(--indigo),var(--violet));font-weight:800;font-size:.78rem;padding:5px 12px;border-radius:999px;letter-spacing:1px}
+  .step h3{font-size:.98rem;margin:8px 0 8px}
+  .step p{color:var(--ink-soft);font-size:.88rem}
+  /* ---------- CONTACT ---------- */
+  .contact-box{background:radial-gradient(600px 300px at 80% 0%,rgba(124,108,255,.25),transparent 60%),var(--glass);border:1px solid var(--stroke);border-radius:26px;padding:56px 40px;text-align:center;backdrop-filter:blur(10px)}
+  .contact-box .lead{margin:0 auto 30px}
+  footer{padding:34px 0;border-top:1px solid var(--stroke);color:var(--ink-soft);font-size:.85rem;text-align:center}
+  footer b{color:var(--ink)}
+  /* ---------- ANIMATIONS (Apple-style) ---------- */
+  .reveal{opacity:0;transform:translateY(36px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal.d1{transition-delay:.1s}.reveal.d2{transition-delay:.2s}.reveal.d3{transition-delay:.3s}
+  .fade-scale{opacity:0;transform:scale(.92);transition:opacity 1.1s cubic-bezier(.2,.7,.2,1),transform 1.1s cubic-bezier(.2,.7,.2,1)}
+  .fade-scale.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,.fade-scale{opacity:1;transform:none}}
+  @media(max-width:880px){
+    .hero{grid-template-columns:1fr;padding-top:120px;text-align:center}
+    .sub{margin-left:auto;margin-right:auto}
+    .grid,.work-grid{grid-template-columns:1fr 1fr}
+    .why{grid-template-columns:1fr 1fr}
+    .steps{grid-template-columns:1fr 1fr}
+    .pricing{grid-template-columns:1fr 1fr}
+    .band .inner{height:56vh}
+  }
+  @media(max-width:540px){
+    .grid,.work-grid,.why,.steps,.pricing{grid-template-columns:1fr}
+    .btn.ghost{margin-left:0;margin-top:12px}
+    .contact-box{padding:44px 24px}
+    .band .caption{padding:26px 22px}
+  }
+</style>
+</head>
+<body>
+
+<header id="top">
+  <nav>
+    <div class="wrap">
+      <div class="logo">Imad <span>&amp;</span> Alex</div>
+      <a class="cta-mini" href="mailto:dsaasd3343@gmail.com">Get a free preview</a>
+    </div>
+  </nav>
+  <div class="wrap hero">
+    <div>
+      <span class="kicker">Web design, done properly</span>
+      <h1>Clean, honest websites for <em>small businesses</em>.</h1>
+      <p class="sub">We're a two-person team — Imad builds your site by hand, Alex keeps communication fast and friendly. No agencies, no jargon, no pressure. Just a website that works hard for your business.</p>
+      <a class="btn primary" href="#pricing">See October prices</a>
+      <a class="btn ghost" href="#services">What we do</a>
+    </div>
+    <div class="hero-art">
+      <div class="imgwrap">
+        <img src="https://media.base44.com/images/public/6ab9e2f7044ccb3aaa3aace6/d8054f1b9_generated_image.png" alt="3D illustration of a floating laptop with orbiting glass elements">
+      </div>
+      <div class="float-badge b1">⚡ Fast turnaround</div>
+      <div class="float-badge b2">🤝 Direct work with the developer</div>
+    </div>
+  </div>
+  <div class="scroll-hint">Scroll ↓</div>
+</header>
+
+<div class="offer-strip">🎉 <b>October offer:</b> a complete one-page website, flat <b>$25</b> one-off <span style="color:var(--ink-soft)">(normally £650)</span> — until <b>7 November</b>. <a href="mailto:dsaasd3343@gmail.com?subject=$25%20one-page%20website%20offer"><b>Claim yours →</b></a></div>
+
+<!-- Apple-style full-bleed parallax band -->
+<section class="band">
+  <div class="inner">
+    <img id="bandImg" src="https://media.base44.com/images/public/6ab9e2f7044ccb3aaa3aace6/98c326512_generated_image.png" alt="3D glass interface concept">
+    <div class="caption fade-scale">
+      <p class="eyebrow">Design that feels alive</p>
+      <h2>Depth, light and motion — sites that impress in the first second</h2>
+      <p class="lead" style="margin-top:10px">We design with the same care as the big studios: smooth motion, 3D depth and a fast, clean experience on every device.</p>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <p class="eyebrow reveal">What we do</p>
+    <h2 class="reveal">Services built around small businesses</h2>
+    <p class="lead reveal">Every site is mobile-first, fast, and designed to turn visitors into calls, bookings and orders. Prices below — old and new, nothing hidden.</p>
+    <div class="grid">
+      <div class="card reveal d1"><span class="ico">📄</span><h3>One-page website</h3><p>Your services, prices, opening hours, photos, map and a click-to-call or WhatsApp button — one sharp page that does the job.</p><p class="price-line"><span class="old-price">normally £650</span><span class="new-price">$25 October offer</span><span class="price-note">Flat one-off, no maintenance attached. Offer ends 7 Nov.</span></p></div>
+      <div class="card reveal d2"><span class="ico">🏢</span><h3>Business website</h3><p>A full 5–7 page site: home, services, about, gallery, testimonials, contact. Built to make your business look established and trustworthy.</p><p class="price-line"><span class="std-price">£1,990 one-off</span><span class="price-note">Flexible — tell us your budget, we'll shape the scope honestly.</span></p></div>
+      <div class="card reveal d3"><span class="ico">🛒</span><h3>Booking &amp; e-commerce</h3><p>Online booking that fills your calendar, or a shop that sells while you sleep. Payments, order forms, confirmations — all set up for you.</p><p class="price-line"><span class="std-price">£3,950 one-off</span><span class="price-note">Flexible — scope and payment agreed upfront.</span></p></div>
+      <div class="card reveal d1"><span class="ico">📱</span><h3>Mobile &amp; speed fixes</h3><p>Site slow or broken on phones? We rebuild it lean and fast, so customers on the move can actually reach you.</p><p class="price-line"><span class="old-price">normally from $30</span><span class="new-price">$25 October offer</span><span class="price-note">For a one-page rebuild. Bigger jobs quoted after a free look.</span></p></div>
+      <div class="card reveal d2"><span class="ico">✉️</span><h3>Contact &amp; booking forms</h3><p>Simple forms that send enquiries straight to your inbox or WhatsApp — no missed messages, no complicated plugins.</p><p class="price-line"><span class="std-price">Included free with every site</span></p></div>
+      <div class="card reveal d3"><span class="ico">🛠️</span><h3>Ongoing site care</h3><p>Want us to handle updates, edits and small changes after launch? Optional care plan — only if you want it, cancel anytime.</p><p class="price-line"><span class="std-price">£60 / month</span><span class="price-note">Optional. Never forced, cancel anytime.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow reveal">Straight pricing</p>
+    <h2 class="reveal">Old prices vs. October</h2>
+    <p class="lead reveal">We've dropped our one-page price to a flat $25 for October only. Everything else stays honest and flexible — and we never charge surprise fees.</p>
+    <div class="pricing">
+      <div class="plan hot reveal d1">
+        <span class="tag">OCTOBER ONLY</span>
+        <h3>One-Page Site</h3>
+        <p class="p-old">normally £650</p>
+        <p class="p-new">$25 <small>one-off</small></p>
+        <ul><li>Modern mobile-first page</li><li>Services, photos, hours, map</li><li>Click-to-call &amp; WhatsApp buttons</li><li>Delivered in days</li><li>No maintenance required</li></ul>
+        <a href="mailto:dsaasd3343@gmail.com?subject=$25%20One-Page%20Site">Claim the $25 offer</a>
+      </div>
+      <div class="plan reveal d2">
+        <h3>Starter Site</h3>
+        <p class="p-old">normally £650</p>
+        <p class="p-new">£325–350 <small>one-off</small></p>
+        <ul><li>One-page, premium polish</li><li>Custom design, your brand</li><li>Contact form included</li><li>Generous revisions</li><li>Pay after you approve the preview</li></ul>
+        <a href="mailto:dsaasd3343@gmail.com?subject=Starter%20Site">Ask about Starter</a>
+      </div>
+      <div class="plan reveal d3">
+        <h3>Business Site</h3>
+        <p class="p-old">5–7 pages</p>
+        <p class="p-new">£1,990 <small>one-off</small></p>
+        <ul><li>Home, services, about, gallery</li><li>Testimonials &amp; contact</li><li>SEO basics built in</li><li>Fast, secure, mobile-first</li><li>Flexible scope for your budget</li></ul>
+        <a href="mailto:dsaasd3343@gmail.com?subject=Business%20Site">Ask about Business</a>
+      </div>
+      <div class="plan reveal d3">
+        <h3>Booking / E-commerce</h3>
+        <p class="p-old">full build</p>
+        <p class="p-new">£3,950 <small>one-off</small></p>
+        <ul><li>Online booking or full shop</li><li>Payments set up for you</li><li>Order &amp; enquiry automation</li><li>Training included</li><li>Care plan optional: £60/mo</li></ul>
+        <a href="mailto:dsaasd3343@gmail.com?subject=Booking%20or%20E-commerce">Ask about Booking/Shop</a>
+      </div>
+    </div>
+    <p class="pricing-note">All prices agreed upfront — the quote you get is the price you pay. Big-site prices are flexible for the right project; talk to us.</p>
+  </div>
+</section>
+
+<section style="background:linear-gradient(180deg,transparent,rgba(18,21,48,.5),transparent)">
+  <div class="wrap">
+    <p class="eyebrow reveal">Why us</p>
+    <h2 class="reveal">Big-agency quality, corner-shop manners</h2>
+    <div class="why">
+      <div class="reveal d1"><h3>Direct work with the developer</h3><p>No account managers. You talk to the people who actually build your site.</p></div>
+      <div class="reveal d2"><h3>Fast turnaround</h3><p>One-page sites usually delivered within days, not weeks — without cutting corners.</p></div>
+      <div class="reveal d3"><h3>Plain communication</h3><p>No jargon, no pressure, no surprise invoices. Everything agreed upfront.</p></div>
+      <div class="reveal d3"><h3>You own everything</h3><p>Your site is yours. No lock-in, no hostage hosting, ever.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow reveal">Concept work</p>
+    <h2 class="reveal">The kind of work we deliver</h2>
+    <p class="lead reveal">A taste of our design direction — clean, modern, made to convert visitors into customers.</p>
+    <div class="work-grid">
+      <div class="work reveal d1"><img loading="lazy" src="https://media.base44.com/images/public/6ab9e2f7044ccb3aaa3aace6/98c326512_generated_image.png" alt="Concept: glass 3D interface design"><div class="cap">Interface concepts — depth, light and clarity</div></div>
+      <div class="work reveal d2"><img loading="lazy" src="https://media.base44.com/images/public/6ab9e2f7044ccb3aaa3aace6/70768bbf2_generated_image.png" alt="Concept: mobile-first business site"><div class="cap">Mobile-first one-pagers — built for the way customers search</div></div>
+      <div class="work reveal d3"><img loading="lazy" src="https://media.base44.com/images/public/6ab9e2f7044ccb3aaa3aace6/d8054f1b9_generated_image.png" alt="Concept: modern web presence"><div class="cap">Modern web presence — fast, honest, effective</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- second parallax band -->
+<section class="band" style="padding:0">
+  <div class="inner">
+    <img id="bandImg2" src="https://media.base44.com/images/public/6ab9e2f7044ccb3aaa3aace6/70768bbf2_generated_image.png" alt="3D mobile-first concept">
+    <div class="caption fade-scale">
+      <p class="eyebrow">Mobile-first, always</p>
+      <h2>Most of your customers will meet you on a phone. We build for that moment.</h2>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:96px">
+  <div class="wrap">
+    <p class="eyebrow reveal">How it works</p>
+    <h2 class="reveal">Simple from the first message</h2>
+    <div class="steps">
+      <div class="step reveal d1"><h3>Free chat</h3><p>Tell us about your business and what you need. We listen first, advise second, sell never.</p></div>
+      <div class="step reveal d2"><h3>Design &amp; build</h3><p>We design and build your site, keeping you updated and involved at every step.</p></div>
+      <div class="step reveal d3"><h3>Review together</h3><p>You look, we adjust. Generous revisions until it feels right for your business.</p></div>
+      <div class="step reveal d3"><h3>Launch</h3><p>Your site goes live and starts working. Ongoing care is optional — your call.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0" id="contact">
+  <div class="wrap">
+    <div class="contact-box fade-scale">
+      <p class="eyebrow">Get started</p>
+      <h2>Your website could be live this week</h2>
+      <p class="lead">Reply to any of our emails or send us a message — tell us about your business and we'll come back with a free preview of what your new site could look like. No charge, no strings.</p>
+      <a class="btn primary" href="mailto:dsaasd3343@gmail.com?subject=Website%20for%20my%20business">dsaasd3343@gmail.com</a>
+      <p style="margin-top:26px;font-size:.85rem;color:var(--ink-soft)">Imad &amp; Alex — London &amp; Baghdad · Worldwide</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 <b>Imad &amp; Alex</b> · Clean, honest websites for small businesses · <a href="mailto:dsaasd3343@gmail.com">dsaasd3343@gmail.com</a></div>
+</footer>
+
+<script>
+  // Reveal on scroll
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal,.fade-scale').forEach(el=>io.observe(el));
+
+  // Apple-style parallax on band images
+  const bands=[...document.querySelectorAll('.band .inner')].map(inner=>({inner,img:inner.querySelector('img'),caption:inner.querySelector('.caption')}));
+  let ticking=false;
+  function onScroll(){
+    if(ticking)return;ticking=true;
+    requestAnimationFrame(()=>{
+      const vh=innerHeight;
+      bands.forEach(({inner,img,caption})=>{
+        const r=inner.getBoundingClientRect();
+        if(r.bottom<-100||r.top>vh+100)return;
+        const progress=(vh-r.top)/(vh+r.height); // 0..1
+        const y=(progress-.5)*90; // parallax shift
+        img.style.transform='translateY('+y+'px) scale(1.04)';
+        const capOffset=Math.max(0,(progress-.5))*30;
+        caption.style.transform='translateY('+(-capOffset)+'px)';
+        caption.style.opacity=String(Math.min(1,Math.max(.2,1-Math.abs(progress-.5)*1.1+.5)));
+      });
+      ticking=false;
+    });
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+</script>
+</body>
+</html>
