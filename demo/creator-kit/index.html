@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Omar Al-Saadi — Creator Media Kit</title>
+<meta name="description" content="Media kit and brand collaboration page: audience, formats, past campaigns and booking.">
+<style>
+  :root{--bg:#0a0a12;--bg2:#12121e;--pink:#ff5c8a;--violet:#8b5cf6;--ink:#f4f4fa;--muted:#9a9ab0;--line:#23233a}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  header{position:sticky;top:0;z-index:20;background:rgba(10,10,18,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+  .brand{font-weight:800;letter-spacing:.4px;font-size:16px}
+  .brand span{color:var(--pink)}
+  nav a{color:var(--muted);text-decoration:none;margin-left:22px;font-size:14px;font-weight:600}
+  nav a:hover{color:#fff}
+  .book{background:linear-gradient(135deg,var(--pink),var(--violet));color:#fff !important;padding:9px 20px;border-radius:999px}
+  .hero{padding:76px 0 54px;position:relative;overflow:hidden}
+  .hero:before{content:"";position:absolute;width:620px;height:620px;border-radius:50%;top:-260px;right:-180px;background:radial-gradient(circle,rgba(139,92,246,.35),transparent 68%)}
+  .hero:after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;bottom:-260px;left:-160px;background:radial-gradient(circle,rgba(255,92,138,.28),transparent 70%)}
+  .tagline{color:var(--pink);font-size:12px;font-weight:800;letter-spacing:3px;text-transform:uppercase;margin-bottom:14px}
+  h1{font-size:56px;line-height:1.05;letter-spacing:-2px;margin:0 0 16px}
+  h1 em{font-style:normal;background:linear-gradient(90deg,var(--pink),var(--violet));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .hero p{color:var(--muted);font-size:18px;max-width:600px;margin:0 0 30px}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-top:44px;position:relative;z-index:2}
+  .stat{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:20px}
+  .stat b{display:block;font-size:30px;letter-spacing:-1px;background:linear-gradient(90deg,#fff,#b9b9d6);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .stat small{color:var(--muted);font-size:12px;letter-spacing:1.2px;text-transform:uppercase}
+  section{padding:70px 0}
+  .eyebrow{color:var(--violet);font-size:11px;font-weight:800;letter-spacing:2.6px;text-transform:uppercase;margin-bottom:10px}
+  h2{font-size:34px;letter-spacing:-1.2px;margin:0 0 12px}
+  .sub{color:var(--muted);max-width:620px;margin:0 0 34px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .card{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:24px;transition:.2s}
+  .card:hover{transform:translateY(-3px);border-color:#3a3a5c}
+  .card h3{margin:0 0 8px;font-size:18px}
+  .card p{margin:0;color:var(--muted);font-size:14px}
+  .ico{font-size:26px;margin-bottom:12px}
+  .logos{display:flex;gap:14px;flex-wrap:wrap}
+  .logo-item{flex:1 1 150px;background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:22px;text-align:center;color:#8f8fa8;font-weight:700;font-size:14px;letter-spacing:.5px}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .bars{display:grid;gap:14px}
+  .bar-row{display:grid;grid-template-columns:120px 1fr 56px;gap:12px;align-items:center;font-size:14px;color:var(--muted)}
+  .track{height:9px;background:#1c1c2e;border-radius:99px;overflow:hidden}
+  .fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--pink),var(--violet))}
+  .cta{background:linear-gradient(135deg,#191927,#101020);border:1px solid var(--line);border-radius:24px;padding:42px}
+  form{display:grid;gap:12px;margin-top:18px}
+  input,select,textarea{padding:13px 15px;border-radius:11px;border:1px solid #2b2b45;background:#0d0d18;color:#fff;font:inherit;width:100%}
+  button{background:linear-gradient(135deg,var(--pink),var(--violet));border:0;color:#fff;padding:15px;border-radius:11px;font:inherit;font-weight:800;cursor:pointer}
+  .quote{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:24px}
+  .quote p{margin:0 0 12px;color:#cfcfe4;font-size:15px}
+  .quote b{color:var(--pink);font-size:13px}
+  footer{border-top:1px solid var(--line);padding:32px 0;color:#6f6f8a;font-size:13px;text-align:center}
+  .social{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+  .social a{color:var(--ink);text-decoration:none;border:1px solid var(--line);padding:10px 16px;border-radius:999px;font-size:13px;font-weight:600}
+  .social a:hover{border-color:var(--pink)}
+  @media(max-width:820px){h1{font-size:36px}.split{grid-template-columns:1fr}.cta{padding:26px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+  <div class="brand">OMAR <span>AL-SAADI</span></div>
+  <div>
+    <a href="#audience">Audience</a>
+    <a href="#formats">Formats</a>
+    <a href="#brands">Brands</a>
+    <a class="book" href="#book">Book a campaign</a>
+  </div>
+</nav></div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="tagline">Creator media kit · Dubai / Baghdad</div>
+  <h1>I make people stop scrolling — and then <em>walk into the store</em>.</h1>
+  <p>Daily short-form video in Arabic, filmed in the UAE and Iraq. Food, family, city life and honest product tests. Everything here is a number you can check, not a claim.</p>
+  <div class="social">
+    <a href="#book">Instagram</a><a href="#book">TikTok</a><a href="#book">YouTube</a><a href="#book">Snapchat</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>1.6M</b><small>Total reach</small></div>
+    <div class="stat"><b>4.8%</b><small>Avg engagement</small></div>
+    <div class="stat"><b>62%</b><small>GCC audience</small></div>
+    <div class="stat"><b>38M</b><small>Views last 90 days</small></div>
+  </div>
+</div></section>
+
+<section id="audience"><div class="wrap">
+  <div class="eyebrow">Audience</div>
+  <h2>Who is actually watching</h2>
+  <p class="sub">A brand deal is worth paying for only if the right people see it. Here is the breakdown before you ask.</p>
+  <div class="split">
+    <div class="bars">
+      <div class="bar-row"><span>UAE</span><div class="track"><div class="fill" style="width:62%"></div></div><span>62%</span></div>
+      <div class="bar-row"><span>Iraq</span><div class="track"><div class="fill" style="width:24%"></div></div><span>24%</span></div>
+      <div class="bar-row"><span>KSA</span><div class="track"><div class="fill" style="width:9%"></div></div><span>9%</span></div>
+      <div class="bar-row"><span>Other</span><div class="track"><div class="fill" style="width:5%"></div></div><span>5%</span></div>
+    </div>
+    <div class="grid" style="grid-template-columns:1fr">
+      <div class="card"><h3>Age 25–40: 71%</h3><p>Working adults, families, and the people who actually decide where to eat, shop and travel.</p></div>
+      <div class="card"><h3>Arabic-first</h3><p>91% of comments in Arabic. Content is written and spoken in Iraqi dialect, understood across the Gulf.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="formats"><div class="wrap">
+  <div class="eyebrow">Formats</div>
+  <h2>What you can book</h2>
+  <p class="sub">Each format has a purpose. Pick the one that matches the goal, not the follower count.</p>
+  <div class="grid">
+    <div class="card"><div class="ico">🎬</div><h3>Integrated short video</h3><p>30–60 second story where the product is part of the scene, not an ad break. Best for awareness.</p></div>
+    <div class="card"><div class="ico">📦</div><h3>Honest product test</h3><p>Unscripted first-use reaction. Works because it is believable — and it converts.</p></div>
+    <div class="card"><div class="ico">📸</div><h3>Photo set + stories</h3><p>6 edited photos plus 3 story frames with a swipe-up link. Good for launches and offers.</p></div>
+    <div class="card"><div class="ico">🤝</div><h3>Long-term ambassador</h3><p>Monthly content over 3–6 months, so the brand becomes familiar instead of a one-off.</p></div>
+  </div>
+</div></section>
+
+<section id="brands" style="padding-top:0"><div class="wrap">
+  <div class="eyebrow">Selected collaborations</div>
+  <h2>Brands I have worked with</h2>
+  <p class="sub">Full campaign list and case numbers are in the media kit PDF — request it below.</p>
+  <div class="logos">
+    <div class="logo-item">HOSPITALITY</div>
+    <div class="logo-item">F&B GROUP</div>
+    <div class="logo-item">RETAIL</div>
+    <div class="logo-item">TELECOM</div>
+    <div class="logo-item">AUTOMOTIVE</div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="eyebrow">Clients</div>
+  <h2>What brands said after</h2>
+  <div class="grid">
+    <div class="quote"><p>“We tracked the code he used. It outperformed our paid social on cost per booking.”</p><b>— Marketing lead, hospitality group</b></div>
+    <div class="quote"><p>“Delivered on the day he promised, approved the script changes without drama.”</p><b>— Brand manager, retail</b></div>
+    <div class="quote"><p>“Second campaign with him, because the first one worked.”</p><b>— Agency partner</b></div>
+  </div>
+</div></section>
+
+<section id="book" style="padding-top:0"><div class="wrap"><div class="cta">
+  <div class="split">
+    <div>
+      <div class="eyebrow">Booking</div>
+      <h2>Start a campaign</h2>
+      <p class="sub" style="margin-bottom:0">Send the brief and dates. You get the media kit, the rate card and available slots the same day.</p>
+      <p class="sub" style="margin-top:16px;margin-bottom:0;font-size:14px">For urgent bookings: <b style="color:#fff">bookings@your-name.com</b></p>
+    </div>
+    <form onsubmit="event.preventDefault();this.innerHTML='<div style=&quot;padding:20px;text-align:center;font-weight:800;color:#ff5c8a&quot;>Brief received — reply within one working day.</div>';">
+      <input placeholder="Brand / company" required>
+      <input placeholder="Your name and email" required>
+      <select><option>Campaign goal: Awareness</option><option>Product launch</option><option>Store traffic</option><option>App installs</option><option>Long-term ambassador</option></select>
+      <input placeholder="Preferred dates / deadline" required>
+      <textarea rows="3" placeholder="What is the product and the one thing people should remember?"></textarea>
+      <button>Request media kit and slots</button>
+    </form>
+  </div>
+</div></div></section>
+
+<footer><div class="wrap">Sample creator media kit — design preview prepared by Future Company. Names and numbers are placeholders.</div></footer>
+</body>
+</html>
