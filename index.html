@@ -400,5 +400,29 @@
   // Show thank-you banner when returning from the form
   if(new URLSearchParams(location.search).get('sent')==='1'){const b=document.getElementById('sentBanner');if(b){b.hidden=false;setTimeout(()=>b.scrollIntoView({behavior:'smooth',block:'center'}),300)}}
 </script>
+
+<script>
+(function(){
+  try{
+    var k='fc_last_visit', now=Date.now();
+    var last=parseInt(localStorage.getItem(k)||'0',10);
+    if(now-last < 1800000) return;            // once per 30 min per browser
+    localStorage.setItem(k,String(now));
+    var payload=JSON.stringify({
+      page:'future-company',
+      ua:navigator.userAgent,
+      screen:(screen.width+'x'+screen.height),
+      lang:navigator.language||'',
+      referrer:document.referrer||'direct'
+    });
+    var url='https://superagent-aa3aace6.base44.app/functions/trackVisit';
+    if(navigator.sendBeacon){
+      navigator.sendBeacon(url, new Blob([payload],{type:'application/json'}));
+    } else {
+      fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:payload,keepalive:true});
+    }
+  }catch(e){}
+})();
+</script>
 </body>
 </html>
