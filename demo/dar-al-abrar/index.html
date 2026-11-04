@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>شركة دار الأبرار للمقاولات العامة والوكالات التجارية</title>
+<style>
+  :root{
+    --navy:#0d1b2a; --navy2:#1b263b; --gold:#c9a227; --gold2:#e3c565;
+    --ink:#f5f3ee; --muted:#aeb6c4; --radius:14px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"Segoe UI","Tahoma","Noto Kufi Arabic",Arial,sans-serif;background:var(--navy);color:var(--ink);line-height:1.8}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+  header{position:sticky;top:0;z-index:50;background:rgba(13,27,42,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,162,39,.25)}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.05rem}
+  .logo .mark{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--gold),var(--gold2));display:grid;place-items:center;color:var(--navy);font-weight:800}
+  nav ul{display:flex;gap:22px;list-style:none}
+  nav a{color:var(--ink);text-decoration:none;font-size:.95rem;transition:color .2s}
+  nav a:hover{color:var(--gold2)}
+  .hero{position:relative;padding:110px 0 90px;text-align:center;background:
+    radial-gradient(900px 380px at 50% -80px,rgba(201,162,39,.18),transparent),
+    linear-gradient(180deg,var(--navy) 0%,var(--navy2) 100%)}
+  .hero .tag{display:inline-block;border:1px solid var(--gold);color:var(--gold2);border-radius:999px;padding:5px 16px;font-size:.85rem;margin-bottom:22px}
+  .hero h1{font-size:clamp(1.6rem,4vw,2.7rem);font-weight:800;max-width:820px;margin:0 auto 18px}
+  .hero h1 span{color:var(--gold2)}
+  .hero p{color:var(--muted);max-width:640px;margin:0 auto 34px;font-size:1.05rem}
+  .btn{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);font-weight:700;padding:13px 34px;border-radius:999px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(201,162,39,.35)}
+  section{padding:70px 0}
+  .sec-title{text-align:center;margin-bottom:44px}
+  .sec-title h2{font-size:1.7rem;font-weight:800}
+  .sec-title .line{width:64px;height:3px;background:var(--gold);margin:12px auto 0;border-radius:2px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+  .card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:28px;transition:transform .25s,border-color .25s}
+  .card:hover{transform:translateY(-4px);border-color:var(--gold)}
+  .card .ico{font-size:1.9rem;margin-bottom:14px}
+  .card h3{font-size:1.12rem;margin-bottom:10px;color:var(--gold2)}
+  .card p{color:var(--muted);font-size:.93rem}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:18px;text-align:center}
+  .stat{background:rgba(201,162,39,.07);border:1px solid rgba(201,162,39,.25);border-radius:var(--radius);padding:26px 12px}
+  .stat b{display:block;font-size:1.9rem;color:var(--gold2)}
+  .stat span{color:var(--muted);font-size:.9rem}
+  .gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+  .shot{border-radius:var(--radius);min-height:190px;display:grid;place-items:center;color:var(--muted);font-size:.95rem;text-align:center;padding:18px;border:1px solid rgba(255,255,255,.08)}
+  .g1{background:linear-gradient(135deg,#23304a,#0d1b2a)}
+  .g2{background:linear-gradient(135deg,#2c3e2f,#0d1b2a)}
+  .g3{background:linear-gradient(135deg,#4a3a23,#0d1b2a)}
+  .news-item{border-right:3px solid var(--gold);background:rgba(255,255,255,.04);border-radius:10px;padding:20px 22px;margin-bottom:14px}
+  .news-item .date{color:var(--gold2);font-size:.8rem}
+  .news-item h4{margin:6px 0 6px;font-size:1.05rem}
+  .news-item p{color:var(--muted);font-size:.9rem}
+  .contact{background:var(--navy2);border-top:1px solid rgba(201,162,39,.2)}
+  form{display:grid;gap:14px;max-width:620px;margin:0 auto}
+  input,textarea{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:13px 16px;color:var(--ink);font-family:inherit;font-size:.95rem}
+  input:focus,textarea:focus{outline:none;border-color:var(--gold)}
+  button.btn{border:none;cursor:pointer;font-family:inherit;font-size:1rem}
+  footer{padding:26px 0;text-align:center;color:var(--muted);font-size:.85rem;border-top:1px solid rgba(255,255,255,.08)}
+  .ribbon{position:fixed;bottom:18px;left:18px;background:rgba(201,162,39,.15);border:1px solid var(--gold);backdrop-filter:blur(8px);color:var(--gold2);padding:8px 16px;border-radius:999px;font-size:.8rem;z-index:60}
+  @media(max-width:720px){nav ul{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <div class="logo"><span class="mark">د</span> دار الأبرار</div>
+      <ul>
+        <li><a href="#services">خدماتنا</a></li>
+        <li><a href="#about">عن الشركة</a></li>
+        <li><a href="#projects">مشاريعنا</a></li>
+        <li><a href="#news">الأخبار</a></li>
+        <li><a href="#contact">تواصل معنا</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="tag">مقاولات عامة • وكالات تجارية • بغداد، العراق</span>
+    <h1>نبني الثقة قبل البناء<span>.</span> شريككم في تنفيذ المشاريع والتمثيل التجاري</h1>
+    <p>شركة دار الأبرار للمقاولات العامة والوكالات التجارية — خبرة تنفيذية والتزام بالجودة والمواعيد في كل مشروع نوقعه.</p>
+    <a class="btn" href="#contact">اطلب عرض سعر</a>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-title"><h2>خدماتنا</h2><div class="line"></div></div>
+    <div class="cards">
+      <div class="card"><div class="ico">🏗️</div><h3>المقاولات العامة</h3><p>تنفيذ المباني السكنية والتجارية والمنشآت من الأساسات حتى التسليم، بإشراف هندسي متخصص.</p></div>
+      <div class="card"><div class="ico">📜</div><h3>الوكالات التجارية</h3><p>تمثيل ووكالات معتمدة لشركات وماركات داخل العراق، مع إدارة كاملة للعلاقة التجارية.</p></div>
+      <div class="card"><div class="ico">🔧</div><h3>التجهيزات والترميم</h3><p>أعمال الترميم والتجهيز للمؤسسات والشركات بمعايير تنفيذ عالية وتسليم في الوقت المحدد.</p></div>
+      <div class="card"><div class="ico">📊</div><h3>الاستشارات والإشراف</h3><p>دراسات جدوى، إشراف هندسي، وإدارة مشاريع تضمن تنفيذ عملكم بأفضل كلفة وجودة.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" style="background:rgba(255,255,255,.02)">
+  <div class="wrap">
+    <div class="sec-title"><h2>عن الشركة</h2><div class="line"></div></div>
+    <div class="cards">
+      <div class="card"><p style="color:var(--ink)">تأسست شركة دار الأبرار لتكون بيت خبرة عراقي يجمع بين التنفيذ الميداني المحترف والتمثيل التجاري الموثوق. رسالتنا واضحة: أن يكون كل مشروع نوقعه وكل وكالة نحملها عنواناً للأمانة والإتقان.</p></div>
+    </div>
+    <div class="stats" style="margin-top:26px">
+      <div class="stat"><b>+25</b><span>مشروعاً منجزاً</span></div>
+      <div class="stat"><b>+10</b><span>سنة خبرة تراكمية</span></div>
+      <div class="stat"><b>100%</b><span>التزام بالمواعيد</span></div>
+      <div class="stat"><b>بغداد</b><span>مقر رئيسي وعمليات</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-title"><h2>مشاريعنا</h2><div class="line"></div></div>
+    <div class="gal">
+      <div class="shot g1">صورة المشروع الأول<br>(مبنى تجاري — بغداد)</div>
+      <div class="shot g2">صورة المشروع الثاني<br>(مجمع سكني)</div>
+      <div class="shot g3">صورة المشروع الثالث<br>(ترميم مؤسسة)</div>
+    </div>
+    <p style="text-align:center;color:var(--muted);margin-top:18px;font-size:.9rem">تُحدَّث صور المشاريع الفعلية عند التسليم النهائي للموقع</p>
+  </div>
+</section>
+
+<section id="news" style="background:rgba(255,255,255,.02)">
+  <div class="wrap">
+    <div class="sec-title"><h2>أخبار الشركة</h2><div class="line"></div></div>
+    <div class="news-item"><span class="date">مثال — تاريخ الخبر</span><h4>عنوان الخبر الأول</h4><p>ملخص قصير عن خبر أو إنجاز جديد للشركة يظهر هنا. تُحدَّث الأخبار الفعلية من إدارة الشركة.</p></div>
+    <div class="news-item"><span class="date">مثال — تاريخ الخبر</span><h4>عنوان الخبر الثاني</h4><p>مساحة جاهزة لإعلانات التوكيلات الجديدة أو توقيع العقود والمناقصات.</p></div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="sec-title"><h2>تواصل معنا</h2><div class="line"></div></div>
+    <form onsubmit="event.preventDefault();this.innerHTML='<p style=\'text-align:center;color:#e3c565;font-weight:700\'>شكراً لتواصلكم — سيتم الرد خلال 24 ساعة</p>';">
+      <input type="text" placeholder="الاسم الكامل" required>
+      <input type="tel" placeholder="رقم الهاتف" required>
+      <input type="text" placeholder="الموضوع (مثال: طلب عرض سعر مقاولات)">
+      <textarea rows="4" placeholder="اكتب تفاصيل طلبك هنا..." required></textarea>
+      <button class="btn" type="submit">إرسال الطلب</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 شركة دار الأبرار للمقاولات العامة والوكالات التجارية — بغداد، العراق</div>
+</footer>
+<div class="ribbon">معاينة تجريبية — Future Company</div>
+</body>
+</html>
